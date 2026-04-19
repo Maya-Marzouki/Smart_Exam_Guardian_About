@@ -1,0 +1,469 @@
+/* =========================================
+   DOWNLOAD PAGE
+   ========================================= */
+
+.download-header {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.dl-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 1rem 0 2rem;
+}
+
+.dl-title em {
+  color: var(--crimson-bright);
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 0 0 40px var(--crimson-glow);
+}
+
+.dl-intro {
+  max-width: 680px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ========== MAIN DOWNLOAD ========== */
+.main-download {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  padding: 3.5rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.md-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(217, 69, 69, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 69, 69, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at 80% 50%, black, transparent 70%);
+  pointer-events: none;
+}
+
+.main-download > * {
+  position: relative;
+}
+
+.md-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-icon {
+  color: var(--crimson-bright);
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 15px var(--crimson-glow));
+}
+
+.md-tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--crimson-bright);
+  color: var(--crimson-bright);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  align-self: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.md-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.md-title-accent {
+  color: var(--crimson-bright);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.md-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.md-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem 2rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.md-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mm-lbl {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+}
+
+.mm-val {
+  font-size: 0.95rem;
+  color: var(--crimson-bright);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ========== RIGHT / MEGA BUTTON ========== */
+.md-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.mega-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2.5rem 2rem;
+  background: var(--crimson);
+  color: var(--bg-void);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--crimson);
+}
+
+.mega-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+
+.mega-btn:hover::before {
+  left: 100%;
+}
+
+.mega-btn:hover {
+  background: var(--crimson-bright);
+  border-color: var(--crimson-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(217, 69, 69, 0.3);
+}
+
+.mb-size {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.copy-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+}
+
+.copy-link:hover {
+  border-color: var(--crimson-bright);
+  color: var(--crimson-bright);
+}
+
+.md-host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  padding: 0.5rem 0;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: all 0.3s;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+.github-link:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+/* ========== PLATFORMS ========== */
+.platforms-section {
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.platform-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.platform-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--crimson-bright);
+}
+
+.plat-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  background: rgba(217, 69, 69, 0.15);
+  color: var(--crimson-bright);
+  border: 1px solid var(--border-accent);
+}
+
+.plat-icon {
+  color: var(--crimson-bright);
+  margin-bottom: 1.5rem;
+}
+
+.platform-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.plat-sub {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.platform-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.plat-meta {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-subtle);
+  letter-spacing: 0.1em;
+}
+
+.plat-meta .sep {
+  color: var(--text-muted);
+}
+
+/* ========== DOC CARDS ========== */
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.doc-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.8rem 2rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+.doc-card:hover {
+  border-color: var(--crimson-bright);
+  background: var(--bg-elevated);
+}
+
+.doc-card svg:first-child {
+  color: var(--crimson-bright);
+  flex-shrink: 0;
+}
+
+.doc-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.doc-sub {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.doc-card > div {
+  flex: 1;
+}
+
+.doc-dl {
+  color: var(--text-secondary);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.doc-card:hover .doc-dl {
+  color: var(--crimson-bright);
+  transform: translateX(4px);
+}
+
+/* ========== INSTALL STEPS ========== */
+.install-section {
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.step-card {
+  padding: 2rem 1.5rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.step-card:hover {
+  border-color: var(--border-accent);
+}
+
+.step-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--crimson-bright);
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px var(--crimson-glow);
+}
+
+.step-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ========== SECURITY NOTE ========== */
+.security-note {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--bg-panel);
+  border-left: 3px solid var(--warning);
+  align-items: start;
+}
+
+.security-note svg {
+  color: var(--warning);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sn-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.security-note p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.security-note strong {
+  color: var(--warning);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .main-download { grid-template-columns: 1fr; padding: 2.5rem; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .platforms-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+}
+
+@media (max-width: 768px) {
+  .main-download { padding: 2rem 1.5rem; }
+  .md-meta { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .doc-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .mega-btn { padding: 2rem 1rem; font-size: 1.1rem; }
+}
