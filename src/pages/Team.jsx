@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Code2, Hexagon } from 'lucide-react'
 import aliImg from '../assets/team/ali.jpg'
-import mayaImg from '../assets/team/maya.jpg'
+import mayaImg from '../assets/team/maya.jpeg'
 import najdImg from '../assets/team/najd.png'
 import salsabilImg from '../assets/team/salsabil.jpg'
 import malekImg from '../assets/team/malek.jpg'
@@ -217,7 +217,7 @@ export default function Team() {
             <div>
               <span className="label">Établissement</span>
               <h2 className="uni-title">
-                École Supérieure Privée<br/>
+                École Supérieure Privée<br />
                 d'Ingénierie et de Technologie
               </h2>
               <p className="uni-desc">

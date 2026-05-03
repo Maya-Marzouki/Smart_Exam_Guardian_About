@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Smart_Exam_Guardian_About
 =======
 # 🛡️ Smart Exam Guardian — Site Web Officiel
@@ -143,4 +142,4 @@ Ce projet est distribué sous licence MIT à des fins éducatives et de démonst
   <strong>🛡️ SMART EXAM GUARDIAN — 2026</strong><br/>
   <em>Surveillance Active · Assisted by AI</em>
 </p>
->>>>>>> 5aaac92 (Smart_Exam_Guardian_About)
+(Smart_Exam_Guardian_About)
